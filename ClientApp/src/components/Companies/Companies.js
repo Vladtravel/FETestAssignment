@@ -12,7 +12,17 @@ const Companies = () => {
         setCompany(data);
       })
       .catch((error) => console.warn(error));
-  });
+  }, []);
+
+  function handelAdd(registryCode) {
+    API.GetRequestedCompany(registryCode).then((data) => {
+      API.GetAllCompanies()
+        .then((data) => {
+          setCompany(data);
+        })
+        .catch((error) => console.warn(error));
+    });
+  }
 
   return (
     <>
@@ -25,7 +35,7 @@ const Companies = () => {
               {el.id === null && (
                 <button
                   className={s.companyItemButton}
-                  onClick={() => API.GetRequestedCompany(el.registryCode)}
+                  onClick={() => handelAdd(el.registryCode)}
                   type="button"
                 >
                   ADD TO SYSTEM

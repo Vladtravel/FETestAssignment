@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  margin-bottom: 72px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  background-color: #ffffff;
+  margin-right: 24px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  transition: all 0.25s ease-in-out;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.titlePosition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2d2c30;
+}
+.title {
+  margin: 0;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 38px;
+  margin-bottom: 11px;
+}
+
+.description {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}

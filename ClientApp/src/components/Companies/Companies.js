@@ -12,7 +12,7 @@ const Companies = () => {
         setCompany(data);
       })
       .catch((error) => console.warn(error));
-  }, [company]);
+  }, []);
 
   function handelAdd(registryCode) {
     API.GetRequestedCompany(registryCode).then((data) => {
